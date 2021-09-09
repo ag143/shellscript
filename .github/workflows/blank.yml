@@ -36,4 +36,5 @@ jobs:
           echo test, and deploy your project.
           cd ../..
           ls
+          chmod +x basicCommands.sh
           sh basicCommands.sh
