@@ -10,9 +10,9 @@ echo "cat listcommands.sh"
 cat listcommands.sh
 echo " uname -s***********"
 uname -s
-echo " uname -r†**********"
+echo " uname -r ********** "
 //uname -r
-echo " uname -v************"
+echo " uname -v************ "
 //uname -v
 echo " uname -n************"
 uname -n
