@@ -11,9 +11,9 @@ cat listcommands.sh
 echo " uname -s***********"
 uname -s
 echo " uname -r†**********"
-uname -r
+//uname -r
 echo " uname -v************"
-uname -v
+//uname -v
 echo " uname -n************"
 uname -n
 echo " uname -m**********"
