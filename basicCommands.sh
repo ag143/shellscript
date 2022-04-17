@@ -25,19 +25,4 @@ uname -i
 echo " uname -o*********** "
 uname -o
 echo " uname -a ************ "
-//uname -a
-echo " lshw ************"
-lshw
-echo " lshw -short**********"
-lshw -short
-echo " uname -r**********"
-lshw -html > hardwareinfo.html
-echo " lscpu**********"
-lscpu
-echo " lsblk -a*********"
-lsblk -a
-echo " lsusb**********"
-lsusb
-echo " lsusb -a***********"
-lsusb -a
-echo "##########################################"
+
