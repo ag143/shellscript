@@ -26,7 +26,7 @@ echo " uname -o*********** "
 uname -o
 echo " uname -a ************ "
 //uname -a
-echo " lshw************""
+echo " lshw ************"
 lshw
 echo " lshw -short**********"
 lshw -short
