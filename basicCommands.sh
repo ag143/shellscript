@@ -2,41 +2,42 @@ echo "this is echo coming from shell script"
 uname
 cat listcommands.sh
 
-
+echo "##########################################"
 echo "this is echo coming from shell script"
-echo "uname "
+echo "uname †*******"
 uname
 echo "cat listcommands.sh"
 cat listcommands.sh
-echo " uname -s"
+echo " uname -s***********"
 uname -s
-echo " uname -r"
+echo " uname -r†**********"
 uname -r
-echo " uname -v"
+echo " uname -v************"
 uname -v
-echo " uname -n"
+echo " uname -n************"
 uname -n
-echo " uname -m"
+echo " uname -m**********"
 uname -m
-echo " uname -p"
+echo " uname -p************"
 uname -p
-echo " uname -i"
+echo " uname -i************"
 uname -i
-echo " uname -o"
+echo " uname -o***********"
 uname -o
-echo " uname -r"
+echo " uname -r************"
 uname -a
-echo " lshw"
+echo " lshw************""
 lshw
-echo " lshw -short"
+echo " lshw -short**********"
 lshw -short
-echo " uname -r"
+echo " uname -r**********"
 lshw -html > hardwareinfo.html
-echo " lscpu"
+echo " lscpu**********"
 lscpu
-echo " lsblk -a"
+echo " lsblk -a*********"
 lsblk -a
-echo " lsusb"
+echo " lsusb**********"
 lsusb
-echo " lsusb -a"
+echo " lsusb -a***********"
 lsusb -a
+echo "##########################################"
