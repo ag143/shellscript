@@ -18,14 +18,14 @@ echo " uname -n************"
 uname -n
 echo " uname -m**********"
 uname -m
-echo " uname -p************"
+echo " uname -p************ "
 uname -p
-echo " uname -i************"
+echo " uname -i************ "
 uname -i
-echo " uname -o***********"
+echo " uname -o*********** "
 uname -o
-echo " uname -r************"
-uname -a
+echo " uname -a ************ "
+//uname -a
 echo " lshw************""
 lshw
 echo " lshw -short**********"
