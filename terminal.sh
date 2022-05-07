@@ -6,4 +6,8 @@
 #network(nmap,tcpdump,ping,mtr,traceroute,digariman,airodump,dig,iptables,netstat)
 #process Monitoring(ps,top,htop,atop,lsof)
 #Text Manipulation TOols(awk,sed,grep,sort,uniq,cat,cut,echo,frmt,tr,nl,egrep,fgrep,wc)
+git config --global user.email "ag14341@gmail.com"
+git config --global user.name "ag143"
+echo "working" >shell_detail_guide.md
+git status
 
