@@ -10,4 +10,7 @@ git config --global user.email "ag14341@gmail.com"
 git config --global user.name "ag143"
 echo "working" >shell_detail_guide.md
 git status
+git add . 
+git commit -m " Update output ."
+git push
 
