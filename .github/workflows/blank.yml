@@ -35,4 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           chmod +x basicCommands.sh
+          chmod +x terminal.sh
           sh basicCommands.sh
+          sh terminal.sh
