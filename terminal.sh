@@ -91,7 +91,7 @@ echo "- atop" >>shell_quick_guide.md
 atop >>shell_quick_guide.md
 echo "***************************************************************************************************************************************************************">>shell_quick_guide.md
 echo "- lsof" >>shell_quick_guide.md
-lsof >>shell_quick_guide.md
+# lsof >>shell_quick_guide.md
 echo "***************************************************************************************************************************************************************">>shell_quick_guide.md
 echo "###############################################################################################################################################################">>shell_quick_guide.md
 ##Text Manipulation TOols(awk,sed,grep,sort,uniq,cat,cut,echo,frmt,tr,nl,egrep,fgrep,wc)
