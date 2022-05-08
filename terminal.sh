@@ -31,7 +31,7 @@ history >>shell_quick_guide.md
 
 ##network(nmap,tcpdump,ping,mtr,traceroute,digariman,airodump,dig,iptables,netstat)
 echo "## network(nmap,tcpdump,ping,mtr,traceroute,digariman,airodump,dig,iptables,netstat)" >>shell_quick_guide.md
-echo "- nmap" >>shell_quick_guide.md\
+echo "- nmap" >>shell_quick_guide.md
 nmap >>shell_quick_guide.md
 echo "- tcpdump" >>shell_quick_guide.md
 tcpdump >>shell_quick_guide.md
