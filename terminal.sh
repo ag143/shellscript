@@ -82,13 +82,13 @@ echo "- ps" >>shell_quick_guide.md
 ps >>shell_quick_guide.md
 echo "***************************************************************************************************************************************************************">>shell_quick_guide.md
 echo "- top" >>shell_quick_guide.md
-top >>shell_quick_guide.md
+# top >>shell_quick_guide.md
 echo "***************************************************************************************************************************************************************">>shell_quick_guide.md
 echo "- htop" >>shell_quick_guide.md
-htop >>shell_quick_guide.md
+# htop >>shell_quick_guide.md
 echo "***************************************************************************************************************************************************************">>shell_quick_guide.md
 echo "- atop" >>shell_quick_guide.md
-atop >>shell_quick_guide.md
+# atop >>shell_quick_guide.md
 echo "***************************************************************************************************************************************************************">>shell_quick_guide.md
 echo "- lsof" >>shell_quick_guide.md
 # lsof >>shell_quick_guide.md
