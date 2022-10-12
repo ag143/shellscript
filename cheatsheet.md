@@ -374,7 +374,7 @@ cd /etc
 - // References
 - // https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/
 
-# FAQ
+# 16- FAQ
 most of the logs stored in /var/log
 
 logs stored in ls /var/log
