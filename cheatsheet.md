@@ -373,3 +373,124 @@ cd /etc
 
 - // References
 - // https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/
+
+# FAQ
+most of the logs stored in /var/log
+
+logs stored in ls /var/log
+https://sec.okta.com/articles/2020/06/intro-log-analysis-harnessing-command-line-tools-analyze-linux-logs
+grep -E "192\.168\.0\.\d{1,3}" /var/log/syslog
+-E for regular expression
+grep -v -E "192\.168\.0\.\d{1,3}" /var/log/syslog
+-v Inverse
+grep -B 2 -A 2 -E "192\.168\.0\.\d{1,3}" /var/log/syslog
+This command will display two lines before and after the line that contains the target IP addresses.
+
+
+awk "/.*Failed password.*/ { print $8 }" /var/log/auth.log
+to print message failed password and print 8 th column value
+
+sed "s/May 11//g" /var/log/auth.log > newfile.txt
+to replace the old value with new value
+
+tail /var/log/auth.log
+to see last few lines in the logs
+
+cat http_access_2822f52_2022-06-22.txt | cut -c 1-16
+
+grep -E "192\.168\.0\.3" /var/log/syslog | wc -l
+
+grep "Failed password" /var/log/auth.log | awk ‘{print $11}’ >> ips.txt
+
+Surround search
+grep -B 3 -A 2 'Invalid user' /var/log/auth.log
+
+
+tail -n 5 /var/log/messages
+
+https://www.loggly.com/ultimate-guide/analyzing-linux-logs/
+
+$ grep "authentication failure" /var/log/auth.log | cut -d '=' -f 8
+root
+
+$ awk '/sshd.*invalid user/ { print $9 }' /var/log/auth.log
+guest
+
+$ awk '/.err>/ {print}' /var/log/auth.log
+<authpriv.err> : Mar 11 18:18:00,hoover-VirtualBox,su[5026]:, pam_authenticate: Authentication failure
+
+
+
+
+https://unix.stackexchange.com/questions/492687/write-shell-script-to-analysis-log-file
+
+
+Source=Mobile
+IP=189.23.45.01
+STATUS=SUCCESS
+TIME=10 sec
+
+Source=Desktop
+IP=189.23.34.23
+STATUS=FAIL
+TIME=101 sec
+
+Source=Mobile
+IP=189.23.34.23
+STATUS=FAIL
+TIME=29 sec
+
+Find IP where status is FAIL?
+Find Ave time taken by all request where status is "success"?
+List how many logins were via Mobile and how much time did it took ?
+
+printf "IPs where status is fail:\n"
+grep -z -oP 'IP=\K.*\n(?=STATUS=FAIL)' datafile
+
+printf "Avg time taken by all requests where status is 'success':\n"
+grep -z -oP 'STATUS=SUCCESS\nTIME=\K\d+' datafile | \
+  awk '{ total += $1; count++ } END { print ( count == 0 ? "NaN" : total/count); }'
+
+printf "Number of logins (successful and failed) via Mobile:\n"
+grep -c 'Source=Mobile' datafile
+
+
+
+read -p "Lets Give File Name , placed in the same dir: " file ; 
+echo " Ques : Find the Number of IP which failed "
+echo "Ans: "
+
+cat "${file}".txt | grep -i STATUS=FAIL -B1 | grep -i IP | awk -F '=' '{print $NF}'
+#cat "${file}".txt | grep -i STATUS=SUCCESS -A1 | grep -i Time | awk -F '=' '{print $NF}' &> clear2.txt
+
+echo "Ques : Find the avg of success time"
+echo "Ans : "
+
+cat "${file}".txt | grep -i STATUS=SUCCESS -A1 | grep -i Time | awk -F '=' '{print $2}' | awk '{print $1}' &> clear2.txt
+avgtime=0
+i=0
+for x in `cat clear2.txt`
+do  
+    i=$(($i + 1))
+    avgtime=$(($avgtime +$x))
+    echo "avg time after ${i} iteration is :${avgtime}"
+    y=$(($x))
+done
+#echo "${x}"
+#echo "${y}"
+avgtime=$(($avgtime/$i))
+
+echo "THe avg time is : ${avgtime}"
+
+echo "Ques : What is the Number of time mobile was tried to login"
+
+echo "Ans :"
+
+cat testfile.txt | grep -i Mobile | wc -l
+
+https://unix.stackexchange.com/questions/481795/extract-information-from-multiple-log-files
+
+
+
+
+grep -z -oP 'STATUS=SUCCESS\nTIME=\K\d+' log1.log | awk '{ total += $1; count++ } END { print ( count == 0 ? "NaN" : total/count); }'
